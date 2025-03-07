@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculater</title>
+    <link  rel="stylesheet" href="BMIstyle.css" >
+</head>
+<body>
+    <nav class="navbar">
+        <a class ="Home" href = "BMIindex.html" >Home</a>
+        <a class ="Home" href ="www.google.com">Go to Google</a>
+    </nav>
+    <h1 style="color :springgreen; font-size: 2.5rem;">BMI CONVERTER</h1>
+    <div class="Hero">
+        <h2 id ="mass">Mass (in kg) : </h2>
+        <input class="input" id ="inp1" type="number">
+        <h2 id ="height">Height (in cm) : </h2>
+        <input class="input" id ="inp2" type="number">
+        <h2>BMI : </h2>
+        <div class="answer"></div>
+        <button>Calculate</button>
+    </div>
+    <div class="stats">
+        <div class="curStates" id ="under">
+            <p>Underweight
+                <br>
+                less than 18.5
+            </p>
+        </div>
+        <div class="curStates" id ="good">
+            <p>
+                Good weight
+                <br>
+            18.5 to 25.9
+            </p>
+        </div>
+        <div class="curStates" id ="Over">
+          <p>  overweight
+            <br>
+        greater  than 25.9</p>
+        </div>
+    
+
+    </div>
+    
+</body>
+<script src="BMI.js"></script>
+
+</html>

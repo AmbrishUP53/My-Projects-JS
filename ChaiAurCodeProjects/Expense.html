@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="/dist/output.css">
+
+    <style> 
+        .List-item{
+            background-color: #3a3f4e;
+            margin: 0.5rem;
+            padding: 0.5rem;
+            width: 85%;
+            justify-self: center;
+            border-radius: 10px;
+        }
+        .Del-btn{
+            background-color: blue;
+            float:right;
+            margin-right: 0.5rem;
+            font-weight: bold;
+            font-size: smaller;
+            border-radius: 8px;
+            padding: 0.2rem  0.4rem;
+            margin-bottom: 0.5rem;
+            align-self: center;
+        }
+        #Expense-list::-webkit-scrollbar{
+            display: none;
+        }
+    </style>
+
+</head>
+<body class="bg-gray-800 min-h-screen flex justify-center items-center text-white">
+
+    <div class="container  bg-gray-500 max-w-sm p-5 flex flex-col justify-center items-center rounded-md shadow-2xl">
+
+        <h2 class="font-bold text-2xl m-2">Track Your Expense</h2>
+
+        <div id="track-box" class="flex justify-center items-center">
+            <input type="text" id="ExpenseName" placeholder="Your Expense.." class="bg-gray-300 text-gray-900  p-1 w-32 mr-1 h-fit font-semibold rounded-md">
+            <input type="number" id="Amount" placeholder="Amount" class="bg-gray-300 text-gray-900  w-24 h-fit  p-1 font-semibold rounded-md" >
+            <button id="Submit" class="bg-gray-800 text-white p-1.5  rounded-md m-2" >Add Task</button>
+        </div>
+
+        <div class="w-full">
+            <h3 class="font-bold text-xl text-center  text-white m-2">Expenses</h3>
+            <ul id="Expense-list" class="overflow-y-auto  max-h-48 border-2 rounded-md border-gray-400" >
+              
+             
+            </ul>
+           <div class="flex justify-center font-semibold">
+            <h3 class="inline-block m-2 text-xl justify-self-center">Total : </h3><span id="Total-Cost" class=" m-2 text-xl">$0.00</span>
+           </div>
+        </div>
+    </div>
+</body>
+<script src="ExpenseTrack.js"></script>
+</html>

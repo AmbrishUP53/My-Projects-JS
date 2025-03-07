@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        /* .Animation{
+            height:10rem;
+            width: 20rem;
+            padding: 10px;
+            border: 2px solid;
+            display: flex ;
+            margin: 1rem 2rem;
+
+            justify-content: space-evenly;
+            /* animation: border 2s ease-in-out 0s infinite; */
+            /* transform: width 2s height 4s ; */
+            /* animation: change 4s linear 1s 1; 
+        } */
+        .content{
+            /* display: flex; */
+
+            position: relative;
+            width:100%;
+            overflow: hidden;
+            /* max-width: 1044px; */
+        }
+        /* .Animation:hover{ */
+            /* transform: scale(2) ; */
+            /* transform: translate(50px , 50px); */
+            /* transform: translateX(50px); */
+            /* transform: translateY(50px); */
+            /* transform: rotate3d(50deg); */
+            /* transform: scale(-1.5); */
+            /* transform: skewY(10deg); */
+            /* transform: rotateY(45deg); */
+            /* height: 200px; */
+            /* transform: scale(1.2); */
+            /* width : 200px; */
+        /* }
+        .name{
+            font:bolder;
+            margin:5px;
+            
+        } */
+
+        @keyframes change {
+            /* 0%{transform: translateX(0);} */
+            33.3%{transform: translateX(-100%);}
+            66.68%{transform: translateX(-200%);}
+            70%{transform: translateX(0);}
+            
+        }
+
+        /* @keyframes text {
+           100% {font-size :2rem; }
+          
+        }
+        @keyframes border {
+            25%{border-color: red;}
+            50%{border-color: yellow;}
+            75%{border-color: green;}
+            100%{border-color: blue;}
+        } */
+
+        .carousel{
+            display: flex;
+            /* width:300%; */
+            /* gap: 5px;
+            /* justify-content: center; */
+      /*      border: 2px solid red;
+            overflow: hidden; */
+            /* animation: change 9s linear  3; */
+        }
+        .slide{
+            min-width:100%;
+        }
+        .slide img{
+            width:100%;
+            /* flex-shrink: 0; */
+            height: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="carousel">
+            <div class="slide"><img src="box2-1st_img.jpg" alt=""></div>
+            <div class="slide"><img src="box2-2nd_image.jpg" alt=""></div>
+            <div class="slide"><img src="box2-3rd_img.jpg" alt=""></div>
+            
+        </div>
+
+    </div>
+</div>
+<script>
+    let carousel = document.querySelector(".carousel");
+    let currSlide = 0;
+    let totalSlide =document.querySelectorAll(".slide").length
+
+    function moveSlide(){
+        if(currSlide < totalSlide-1){
+            currSlide++;
+        }else{
+            currSlide = 0;
+        }
+        carousel.style.transform = `translateX(-${currSlide*100}%)`;
+    }
+    setInterval(moveSlide , 3000)
+</script>
+</body>
+</html>

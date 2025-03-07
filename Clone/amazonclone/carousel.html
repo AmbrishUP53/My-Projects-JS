@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel2</title>
+    <style>
+        .content{
+            margin : 0.8rem;
+            width:100%;
+            overflow: hidden;
+            position: relative;
+            max-width : 50%;
+            justify-self: center;
+
+        }
+        .carousel{
+            display:  flex;
+            /* min-width: 100%; */
+        }
+        .slide{
+            min-width: 100%;
+        }
+        img{
+            object-fit: contain;
+        }
+        .slide img{
+            width : 100%;
+            height: auto;
+        }
+        .btn-container{
+            position: absolute;
+            bottom:0;
+            left : 50%;
+            margin-bottom: 10px;
+            display: flex;
+            gap : 5px;
+            
+        }
+        .btn{
+            width:  8px;
+            height: 8px;
+            background-color: white;
+            border-radius: 50%;
+
+        }
+        .ChangeColor{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="carousel">
+            <div class="slide">
+                <img src="beuty-box3.jpg" alt="slide1">
+            </div>
+            <div class="slide">
+                <img src="box2-1st_img.jpg" alt="slide1">
+            </div>
+            <div class="slide">
+                <img src="kitchen-box3.jpg" alt="slide1">
+            </div>
+        </div>
+        <div class="btn-container">
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+        </div>
+    </div>
+    
+
+    <script>
+        const carousel = document.querySelector(".carousel");
+        let currSlide = 0;
+        let totalSlide = document.querySelectorAll(".slide").length;
+
+        function autoMoveSlide(){
+            if(currSlide < totalSlide-1){
+                currSlide++;
+            }else{
+                currSlide = 0;
+            }
+            carousel.style.transform = `translatex(-${currSlide*100}%)`;
+            let btn = document.querySelectorAll(".btn");
+            btn.forEach((indicator)=>{
+                // console.log(indicator)
+                indicator.style.border = "2px solid black;"
+            })
+            }
+        setInterval(autoMoveSlide , 2000)
+        
+    </script>
+</body>
+</html>

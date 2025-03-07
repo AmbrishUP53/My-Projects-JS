@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO List</title>
+    <link rel="stylesheet" href="./output.css">
+    <style>
+        #TO-do-list > li{
+            font-size: small;
+            color : white ;
+            background-color: rgb(73, 72, 72);
+            margin: 0.4rem;
+            height:auto; 
+            padding: 5px;
+            padding-left: 15px;
+            border-radius: 5px;
+        }
+        li > button{
+            color:whitesmoke ;
+            background-color: orangered; 
+            border-radius: 8px;
+            padding : 2px 5px; 
+            float: right ;
+            margin : 0px 5px;
+        }
+        .completed{
+            text-decoration: line-through;
+        }
+
+    </style>
+</head>
+<body class="bg-gray-700 flex items-center min-h-screen justify-center">
+    <div class=" bg-gray-800   border-gray-300 p-2 min-w-1/2  max-h-80
+        shadow-xl shadow-gray-800 overflow-auto
+    ">
+      
+        <h2 class="text-center mb-2 p-1 font-semibold text-lg text-gray-100">To Do List</h2>
+
+        <div class="flex justify-center max-w-sm">
+            <input type="text" name="text" id="text" placeholder="Add a task" class="input-box px-1.5 py-1 mx-2 rounded-md" >
+            <button  id="Add-task-Btn" class="px-1.5 py-1 bg-pink-400 rounded-md">Add Task</button>
+        </div>
+        <ul id="TO-do-list" class="">
+            <!-- <li>hello 
+                <button>delete</button>
+            </li> -->
+        </ul>
+
+        <!-- <div class="content justify-self-center h-auto min-h-28 min-w-64 p-2   text-white  my-2 " >
+            <div id="item" class=" rounded-sm h-10 mb-2 text-white w-full bg-gray-500  ">
+                <p id="task" class=" inline-block p-1 m-0.5  font-medium">hello</p>
+                <button class="Delete float-right bg-red-500 h-auto text-gray-50 p-1.5 rounded-md  mx-2 my-1 text-sm">Delete </button>
+            </div>
+            <div id="item" class=" rounded-sm h-10 mb-2 text-white w-full bg-gray-500 ">
+                <p id="task" class=" inline-block p-1 m-0.5  font-medium">hello</p>
+                <button class="Delete float-right bg-red-500 h-auto text-gray-50 p-1.5 rounded-md  mx-2 my-1 text-sm">Delete </button>
+            </div>
+            <div id="item" class=" rounded-sm h-10 mb-2 text-white w-full bg-gray-500 ">
+                
+                <p id="task" class=" inline-block p-1 m-0.5  font-medium">hello</p>
+                <button class="Delete float-right
+                 bg-red-500 h-auto text-gray-50 p-1.5 rounded-md  mx-2 my-1 text-sm">Delete </button>
+            </div>
+        </div> -->
+    </div>
+    <script src="ToDoList.js"></script>
+</body>
+<!-- // let newList = document.createElement("li")
+
+// console.log(inputTask.value)
+// newList.innerText = inputTask.value ; 
+// let delbtn = document.createElement("button");
+// delbtn.innerText = "Delete" ;
+// delbtn.classList.add("delete") ;
+// newList.appendChild(delbtn);
+// toDoList.appendChild(newList); -->
+</html>

@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background-color: #000;
+    color: #fff;
+    margin: 0.5rem;
+    font-family: "Poppins", serif;
+   
+}
+.main{
+    height: 100vh;
+    /* width: 100vh; */
+    background-image: url(./camera.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+
+.menu-btn{
+    font-size: 1.5rem;
+    margin: 0.6rem;
+    transition: font-size 0.5s ease-out;
+}
+.menu-btn:hover{
+    font-size: 2rem;
+}
+
+.Sidebar{
+    background-color: #212121;
+    width: 14rem;
+    height: 100vh;
+    margin-left: -300px;
+    position: relative;
+    transition: all 0.3s linear;
+}
+.Company-name > h2{
+    margin-bottom: 0.4rem;
+    display: inline-block;
+}
+.Company-name{
+    position: relative;
+    padding: 0.2rem;
+    box-shadow: 0 1px 3px #d3d3d3;
+   
+   
+    /* display: ; */
+}
+.Company-name > label i{
+
+    float: right;
+    margin-top: 0.35rem;
+    text-align: center;
+    font-size: large;
+    opacity: 0.5;
+    transition: all 0.3s linear;
+}
+.Company-name > label i:hover{
+    font-size: larger;
+    opacity: 1;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 0.5rem;
+}
+.menu-items{
+    margin: 0.3rem 0.4rem;
+    list-style: none;
+    size: large;
+    font-size: larger;
+    padding: 0.25rem;
+    transition: all 0.3s linear;
+}
+.menu-items:hover{
+    /* border : 1px solid #a3a3a3; */
+    box-shadow: 1px 1px 3px #a3a3a3;
+}
+.menu-items > i{
+    margin-right: 0.4rem;
+}
+
+.social-icons{
+    position: absolute;
+    bottom: 0.3rem;
+    left: 25%;
+    right: 25%;
+    padding: 0.3rem;
+}
+.social-icons > i{
+    margin-right: 0.3rem;
+    opacity: 0.5;
+    transition: all 0.3s ease-in;
+}
+.social-icons > i:hover{
+    opacity: 1;
+    font-size: larger;
+}
+#check {
+    display: none;
+}
+
+#check:checked ~ .menu-btn{
+    display: none;
+}
+#check:checked ~ .Sidebar{
+  margin: 0;
+}

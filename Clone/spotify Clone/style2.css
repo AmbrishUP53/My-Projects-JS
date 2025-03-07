@@ -1,0 +1,284 @@
+body{
+    margin : 0  ;
+    padding:  0;
+    background-color: black;
+    overflow: hidden;
+}
+
+.main{
+    display: flex;
+    height: 100vh;
+}
+.sidebar { 
+    background-color: blue;
+    width : 200px;
+}
+
+.sidebar{
+    background-color: #000;
+    display: flex ;
+    gap : 0.6rem;
+    flex-direction: column;
+    padding: 0.2rem;
+    margin-right: 0.5rem;
+}
+.Home {
+    background-color: #181616;
+    border-radius: 0.7rem;
+   
+    /* display: flex; */
+    /* flex-direction: column; */
+    font-size: large;
+}
+.HomeContent{
+    line-height: 0.2rem;
+    color : #fff;
+    display: flex;
+    align-items: center;
+    gap : 0.2rem;
+    padding-left: 0.2rem;
+}
+.text{
+    opacity: 0.7;
+}
+.text:hover{
+    opacity: 1;
+}
+.library{
+    background-color: #181616;
+    color: #fff;
+    border-radius: 0.75rem;
+    padding: 0.4rem;
+    flex : 1;
+}
+.headpart{
+    background-color: inherit;
+    display: flex;
+    padding: 0.2rem;
+    padding-right: 0.4rem;
+    justify-content: space-between;
+}
+.headpart > img {
+    height : 1rem;
+
+}
+.lib-icon{
+    display: flex;
+    font-weight: 700;
+    font-size: large;
+    align-items: center;
+    
+    margin-right: 0.2rem;
+}
+.lib-icon > span{
+    margin-right: 0.4rem;
+    opacity: 0.8;
+}
+.lib-icon > span:hover{
+    opacity: 1;
+}
+
+.lib-Card{
+    background-color: #313231;
+    border-radius: 0.5rem;
+    padding: 0.25rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+
+}
+.lib-Card > h3 {
+    font-size: 0.9rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.lib-Card > h4{
+    font-size: 0.75rem;
+    opacity: 0.9;
+}
+
+.bages{
+    border : none;
+    padding :0.4rem;
+    border-radius: 100px;
+    font-weight: 700;
+    margin-right: 0.3rem;
+}
+.bages:hover{
+    background-color: #ffe;
+}
+
+
+.heroSection{
+    background-color: #121212;
+    flex: 1;
+    overflow: auto;
+    padding-right: 0.4rem;
+}
+.sticky-nav{
+    position: sticky;
+    top : 0;
+    margin-top : 0;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.4rem;
+    z-index: 10;
+}
+.sticky-nav-icons{
+    padding: 0.3rem;
+}
+.sticky-nav-icons > i{
+    background-color: black;
+    margin: 0.1rem;
+    padding: 0.3rem;
+    border-radius: 50%;
+    color : white;
+    font-weight: 700;
+    font-size: larger;
+}
+.sticky-nav-options{
+    color: white;
+    display: flex;
+    gap : 0.5rem;
+    justify-content: space-around;
+    padding : 0.3rem 0.4rem ;
+}
+.sticky-nav-options > i{
+    margin-right: 0.3rem;
+}
+
+.Main-content{
+    padding: 0.3rem;
+}
+.slide >h2 {
+    color : white;
+    font-size: 1.25rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+.slide{
+    position: relative;
+}
+.card-container{
+    padding: 0.3rem;
+    width: 10rem;
+    display: flex;
+    gap: 0.4rem;
+    max-width: fit-content;
+}
+.Card{
+    display: flex;
+    box-shadow: inset;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    padding: 0.4rem;
+    background-color: #313131;
+}
+.Card > img {
+    object-fit: contain;
+    height : 6rem;
+    width : 7rem;
+}
+.Card>div{
+    color : white;
+    overflow: auto;
+    display: inline;
+    font-size: 0.6rem;
+    justify-self: start;
+
+}
+.expand{
+    position: absolute;
+    top: 0.2rem;
+    right: 0;
+    color : white;
+}
+
+
+
+.musicPlayer{
+    position : fixed;
+    bottom: 0;
+    background-color: black;
+    min-height: 2.5rem;
+    width : 100%;
+    padding : 0.3rem;
+    display: flex;
+    gap : 0.2rem;
+}
+
+.Song{
+    width : 27%;
+    height : 3rem;
+    background-color: inherit;
+}
+.player{
+    width : 45%;
+    height : 3rem;
+    background-color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem;
+}
+.player-icons{
+    width: 60%;
+    padding: 0.2rem;
+    padding-bottom: 0.1rem;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+   
+}
+.player-icons > img{
+    opacity: 0.7;
+    flex-shrink: 0;
+    justify-self: center;
+    margin-right: 0.7rem;
+}
+
+.player-icons > img:hover{
+    opacity: 1;
+}
+.player-icons > img{
+    object-fit: cover;
+    height  : 1.2rem;
+}
+.playback-bar{
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    color : white;
+    width: 100%;
+}
+.playback-bar > label{
+    width : 15%;
+    margin : 5px 0.2rem;
+    font-weight: 400;
+}
+#progress{
+    width: 70%;
+    appearance: none;
+    background-color: transparent;
+}
+#progress::-webkit-slider-runnable-track{
+    background-color: #fff;
+    height : 0.25rem;
+    border-radius: 100px;
+}
+#progress::-webkit-slider-thumb{
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    margin-top: -6px;
+    background-color: blue;
+}
+
+.play-icons{
+    width : 25%;
+    /* margin-right: 0.3rem; */
+    height : 3rem;
+    background-color: inherit;
+}

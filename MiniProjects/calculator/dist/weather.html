@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather in Your City</title>
+    <link rel="stylesheet" href="output.css">
+    <style>
+        #ErrorMsg{
+            color:rgb(11, 235, 231);
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="bg-blue-400 min-h-screen flex items-center justify-center">
+
+    <div id="container" class="bg-blue-600 min-h-40 w-auto max-w-lg p-3 rounded-sm shadow-2xl ">
+        <h2 class="justify-self-center font-bold m-2 text-gray-900 text-lg">Weather Web</h2>
+        <div id ="form" class="flex items-center">
+            <label for="city" class="p-1 m-2 font-serif text-lg focus:outline-none text-fuchsia-100 font-bold">City : </label>
+            <input type="text" name="city" id="cityInput" class="p-1 m-2 font-serif text-lg focus:outline-none inline-block rounded-sm" placeholder="Enter the city ..."> 
+            <button id="getWeatherbtn" class="bg-gray-400 rounded-md p-1 m-1 text-white font-semibold">Get weather</button>
+        </div>
+
+        <div id="result" class="hidden min-h-3/4  m-2  p-1 rounded-lg  w-full bg-white ">
+           <h2 id="city-name" class="text-center">Gorakhpur</h2>
+           <p id="temprature" class="text-lg font-semibold text-center ">temprature : 30</p>
+           <p id="discription" class="text-sm font-semibold text-center"> clear sky</p>
+        </div>
+        <div id="ErrorMsg" class="hidden text-sm font-semibold text-red-600 text-center m-2  ">city was not found . please try again letter .</div>
+    </div>
+    <script src="weather.js"></script>
+</body>
+</html>
+npm audit fix
+npm audit fix --force

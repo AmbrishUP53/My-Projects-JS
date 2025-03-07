@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", serif;
+   
+}
+
+.root{
+    position: relative;
+    height: 700px;
+    width:900px;
+    min-width: 100%;
+    background-color: #fe5105;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.root > img{
+    height : 360px;
+    width: 200px;
+    position: absolute;
+
+}
+#bgimg1{
+    top: 15%;
+    left: 0;
+}
+#bgimg2{
+    top : 14%;
+    right: 0;
+}
+
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    margin: 2.5rem;
+    padding: 0.6rem;
+    width: 85%;
+    justify-self: center;
+}
+.CompanyName{
+    display: flex;
+    align-items: center;
+    font-size: 1.75rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+.CompanyName > img{
+    height: 3rem;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    margin-right: 0.4rem;
+    
+}
+
+.Nav-items{
+    display: flex;
+    align-items: center;
+
+}
+.Nav-items > li{
+    flex-shrink: 0;
+    list-style-type: none;
+    margin-right: 0.7rem;
+    margin-left: 0.7rem;
+}
+.items{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+.DownLoadApp{
+    background-color: inherit;
+    padding: 0.6rem;
+    border : 1px solid #fff;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 2px 2px 2px inherit;
+}
+.signIn{
+    background-color: #000;
+    padding: 0.6rem;
+    width: 5rem;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 700;
+    box-shadow: 2px 2px 2px #000;
+}
+.root-content{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 0.5rem;
+    margin-top: 2.5rem;
+}
+
+.heading{
+    width: 57%;
+    justify-self: center;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+}
+
+.inputField{
+    display: flex;
+    z-index:  10;
+}
+/* .inputField > input{
+    margin : 0.5rem;
+    padding: 0.9rem;
+    border-radius: 8px;
+    border : none;
+    margin-right: 0;
+} */
+.input-container1{
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    align-items: center;
+    gap: 0.3rem;
+    color: #000;
+    margin: 0.5rem;
+    padding: 0.7rem;
+    background-color: #fff;
+
+    border-radius: 8px;
+}
+.input-container2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.3rem;
+    color: #000;
+    margin: 0.5rem;
+    padding: 0.7rem;
+    background-color: #fff;
+
+    border-radius: 8px;
+}
+.input-container1 > input{
+    border: none;
+    margin: 0.2rem;
+    font-size: 1rem;
+    /* width: rem; */
+}
+.input-container2 > input{
+    border : none;
+    margin: 0.2rem;
+    font-size: 1rem;
+}
+
+
+.img-card{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 12rem;
+    width : 10rem;
+    position: relative;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 20px;
+}
+
+.img-card > img{
+    height:7rem;
+    width: 7rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.forwardBtn{
+    background-color: #fe5105;
+    color: #fff;
+    position: absolute;
+    bottom: 1rem;
+    left : 1rem;
+    padding: 0.6rem;
+    font-size: larger;
+    border-radius: 50%;
+}
+
+.root-footer{
+    display: flex;
+    overflow-x:scroll ;
+    width: 85%;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+
+.MidItems{
+    display: flex;
+    flex-direction: column;
+  
+    margin: 4rem;
+    margin-right: 1rem;
+    padding: 0.6rem;
+    min-width: 750px;
+    
+    position: relative;
+}
+.ItemsBox{
+    display: flex;
+    
+}
+.ItemsBox > img{
+    height: 144px;
+    margin: 1rem;
+}
+.control{
+    max-width: 88%;
+}
+
+.control > h3{
+    float:left ; 
+    width: fit-content;
+    font-size: 1.3rem;
+    margin-left: 2rem;
+}
+.control > i{
+    background-color: gray;
+    padding: 0.5rem;
+    border-radius: 50%;
+    opacity: 0.6;
+    font-weight: 700;
+    font-size: large;
+    float: right;
+    margin-right: 1rem;
+}

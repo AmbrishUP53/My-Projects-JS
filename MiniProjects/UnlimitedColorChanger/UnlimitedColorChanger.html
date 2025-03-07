@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlimited color Changer</title>
+    <link rel= "stylesheet" href="style.css">
+</head>
+<body>
+    <navbar id ="nav">
+        <a class ="home" href="UnlimitedColorChanger.html">Home</a>
+        <a class="home" href="https://github.com">GitHUb link</a>
+    </navbar>
+    <p class="text" >Click start change the Background Color every second</p>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+    
+</body>
+    <script>
+        let intervalId ;
+        document.querySelector("#start").addEventListener("click" , function(){
+        if(!intervalId){
+            intervalId = setInterval(function(){
+
+                const num1 = Math.floor(Math.random()*255 )
+                const num2 = Math.floor(Math.random()*255)
+                const num3 = Math.floor(Math.random()*255 )
+
+                document.querySelector("body").style.backgroundColor = `rgb(${num1}, ${num2} ,${num3})`
+
+            } , 1000)
+        }
+        })
+
+        document.querySelector("#stop").addEventListener("click" , function(){
+            clearInterval(intervalId);
+            intervalId = null;
+        })
+
+
+    </script>
+
+</html>

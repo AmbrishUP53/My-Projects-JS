@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-cyan-500 min-h-screen flex justify-center items-center">
+
+    <div class="border-4 shadow-2xl shadow-gray-500 max-w-md w-3/4 grid  rounded-lg grid-row-7 bg-blue-100 ">
+
+        <h2 class="text-center text-zinc-700 m-2 font-bold text-2xl">Calculator </h2>
+      
+        <div class="display border-2 border-red-300 h-20 w-full         row-span-3 flex  justify-center flex-col items-center">
+        
+            <div class="inpt h-2/3 w-5/6 readonly  bg-cyan-400 m-2 p-2 mb-0 rounded-md  text-black relative  " >
+            </div>
+            <div id="result" class=" m-2 mt-0 w-5/6 rounded-b-sm text-blue-800 text-sm font-bold  ">please enter a valid expression . </div>
+        </div>
+
+
+        <div class="border-red-300 mx-4 mt-2 mb-0 p-2 h-16  grid grid-rows-1 grid-cols-5 gap-4 justify-between">
+            <button id="history" class="bg-gray-400 m-1 px-2 p-0.5 font-bold rounded-md text-center" >pre</button>
+            <button id="unit" class="bg-gray-400 m-1 px-2 p-0.5 font-bold rounded-md text-center">unit</button>
+            <button id="tools" class="bg-gray-400 m-1 px-2 p-0.5 font-bold rounded-md text-center">+/-</button>
+            <button class="clearBtn   bg-gray-400 m-1.5  text-center font-bold text-lg text-gr rounded-md buttons shadow-2xl shadow-gray-500   "   >C</button>
+        </div>
+
+
+        <div id="More-operator" class="hidden border-red-300 mx-4 mt-2 mb-0 p-2 h-auto border-2   ">
+            <div class="grid grid-rows-2 grid-cols-4 w-full gap-2">
+                <button class= "Hid-Operator  bg-gray-600 text-white text-center rounded-md px-2 p-2 ">log</button>
+                <button class= "Hid-Operator  bg-gray-600 text-white text-center rounded-md px-2 p-2 ">cos</button>
+                <button class= "Hid-Operator  bg-gray-600 text-white text-center rounded-md px-2 p-2 ">sin</button>
+                <button class= "Hid-Operator  bg-gray-600 text-white text-center rounded-md px-2 p-2 ">tan</button>
+                <button class= "Hid-Operator  bg-gray-600 text-white text-center rounded-md px-2 p-2 ">ln</button>
+                <button class= "Hid-Operator  bg-gray-600 text-white text-center rounded-md px-2 p-2 ">&pi;</button>
+                <button class= "Hid-Operator  bg-gray-600 text-white text-center rounded-md px-2 p-2 ">e</button>
+                <button class= "Hid-Operator  bg-gray-600 text-white text-center rounded-md px-2 p-2 ">&Sqrt;</button>
+      
+                <button class= "Hid-Operator  bg-gray-600 text-white text-center rounded-md  p-2 ">e<sup>x</sup></button>
+                <button class= "Hid-Operator  bg-gray-600 text-white text-center rounded-md  p-2 ">x<sup> 2</sup></button>
+                <button class= "Hid-Operator  bg-gray-600 text-white text-center rounded-md  p-2 ">x<sup> y </sup></button>
+            </div>
+        </div>
+
+        <div class="nums grid grid-rows-1 row-span-4 grid-cols-6 gap-2">
+            <div class="col-span-4 grid grid-cols-3 gri-rows-4 ">
+
+            <button class=" min-h-4 min-w-5 bg-gray-400 m-4 p-4 text-center font-bold text-xl text-gr rounded-md buttons shadow-2xl shadow-gray-500 border-6  "   >(</button>
+            <button class="min-h-4 min-w-5 bg-gray-400 m-4 p-4 text-center font-bold text-xl text-gr rounded-md buttons shadow-2xl shadow-gray-500 border-6  "   >)</button>
+            <button class="backBtn  min-h-4 min-w-5 bg-gray-400 m-4 p-4 text-center font-bold text-xl text-gr rounded-md  shadow-2xl shadow-gray-500 border-6  "   >x</button>
+       
+            <button class="min-h-4 min-w-5 bg-gray-400 m-4 p-4 text-center font-bold text-xl text-gr rounded-md buttons shadow-2xl shadow-gray-500 border-6  "   >7</button>
+            <button class="min-h-4 min-w-5 bg-gray-400 m-4 p-4 text-center font-bold text-xl text-gr rounded-md buttons shadow-2xl shadow-gray-500 border-6  "   >8</button>
+            <button class="min-h-4 min-w-5 bg-gray-400 m-4 p-4 text-center font-bold text-xl text-gr rounded-md buttons shadow-2xl shadow-gray-500 border-6  "   >9</button>
+
+            <button class="min-h-4 min-w-5 bg-gray-400 m-4 p-4 text-center font-bold text-xl text-gr rounded-md buttons shadow-2xl shadow-gray-500 border-6  "   >6</button>
+            <button class="min-h-4 min-w-5 bg-gray-400 m-4 p-4 text-center font-bold text-xl text-gr rounded-md buttons shadow-2xl shadow-gray-500 border-6  "   >5</button>
+            <button class="min-h-4 min-w-5 bg-gray-400 m-4 p-4 text-center font-bold text-xl text-gr rounded-md buttons shadow-2xl shadow-gray-500 border-6  "   >4</button>
+
+            <button class="min-h-4 min-w-5 bg-gray-400 m-4 p-4 text-center font-bold text-xl text-gr rounded-md buttons shadow-2xl shadow-gray-500 border-6  "   >3</button>
+            <button class="min-h-4 min-w-5 bg-gray-400 m-4 p-4 text-center font-bold text-xl text-gr rounded-md buttons shadow-2xl shadow-gray-500 border-6  " >2</button>
+            <button class="min-h-4 min-w-5 bg-gray-400 m-4 p-4 text-center font-bold text-xl text-gr rounded-md buttons shadow-2xl shadow-gray-500 border-6  "   >1</button>
+
+            <button class="min-h-4 min-w-5 bg-gray-400 m-4 p-4 text-center font-bold text-xl text-gr rounded-md buttons
+             shadow-2xl shadow-gray-500 border-6  "   >.</button>
+            <button class="min-h-4 min-w-5 bg-gray-400 m-4 p-4 text-center font-bold text-xl text-gr rounded-md buttons shadow-2xl shadow-gray-500 border-6  "   >0</button>
+            <button class="min-h-4 min-w-5 bg-gray-400 m-4 p-4 text-center font-bold text-xl text-gr rounded-md equal shadow-2xl shadow-gray-500 border-6  "   >=</button>
+
+           </div>
+           
+            <div class="col-span-2  ">
+            <button class="operator min-h-4 min-w-5 bg-gray-400 m-4 p-4 text-center font-bold text-xl text-gr rounded-md shadow-2xl shadow-gray-500 border-6  "   >%</button>
+            <button class="operator min-h-4 min-w-5 bg-gray-400 m-4 p-4 text-center font-bold text-xl text-gr rounded-md shadow-2xl shadow-gray-500 border-6  "   >+</button>
+            <button class="operator min-h-4 min-w-5 bg-gray-400 m-4 p-4 text-center font-bold text-xl text-gr rounded-md shadow-2xl shadow-gray-500 border-6  "   >-</button>
+            <button class="operator min-h-4 min-w-5 bg-gray-400 m-4 p-4 text-center font-bold text-xl text-gr rounded-md shadow-2xl shadow-gray-500 border-6  "   >*</button>
+            <button class="operator min-h-4 min-w-5 bg-gray-400 m-4 p-4 text-center font-bold text-xl text-gr rounded-md shadow-2xl shadow-gray-500 border-6  "   >/</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+<script>
+    const input = document.querySelector(".inpt");
+    const buttons = document.querySelectorAll(".buttons");
+    const operators = document.querySelectorAll(".operator");
+    const result = document.getElementById("result");
+
+    let res = 0; 
+    let op = '';
+    let currNum = '';
+    function addNumber(num){
+        currNum += num;
+        input.innerHTML = currNum ;
+    }
+    function choseOpertor(opt){
+        if(currNum == '') return ;
+        currNum += opt
+        input.innerHTML = `${currNum}  `;
+        
+    }
+
+    buttons.forEach(button =>{
+        button.addEventListener("click" , (e)=>{
+           addNumber(e.target.innerHTML)
+           result.innerHTML = ""
+        });
+    })
+    operators.forEach(opt =>{
+        opt.addEventListener("click" , (e)=>{
+            choseOpertor(e.target.innerHTML);
+            if(input.innerHTML ==''){
+                result.innerHTML = "please first enter a number "
+            }
+        });
+    });
+
+    document.querySelector(".equal").addEventListener("click" ,(e)=>{
+
+        input.innerHTML = input.innerHTML
+        .replace(/e/g , 'Math.E')
+        .replace(/cos/g, 'Math.cos')
+        .replace(/sin/g, 'Math.sin')
+        .replace(/log/g,'Math.log10')
+        .replace(/ln/g, 'Math.ln')
+        .replace(/\^/g ,'**')
+
+        input.innerHTML = eval(input.innerHTML);
+        currNum ='';
+    })
+
+    document.querySelector(".backBtn").addEventListener("click",(e)=>{
+        let len = currNum.length;
+        currNum = currNum.slice(0,len-1);
+        input.innerHTML = currNum;
+    })
+    document.querySelector(".clearBtn").addEventListener("click" ,(e)=>{
+        input.innerHTML = "";
+        currNum = "";
+    })
+
+    document.getElementById("tools").addEventListener("click" ,(e)=>{
+        document.getElementById("More-operator").classList.toggle("hidden")
+    });
+
+    document.querySelectorAll(".Hid-Operator").forEach(hidOp =>{
+        hidOp.addEventListener("click" , (e)=>{
+            console.log("hello")
+            if(e.target.innerHTML == "sin" ){
+                currNum += "sin(";
+                input.innerHTML = currNum;
+            }
+
+            if(e.target.innerHTML == "cos" ){
+                currNum += "cos(";
+                input.innerHTML = currNum;
+            }
+            if(e.target.innerHTML == "tan" ){
+                currNum += "tan(";
+                input.innerHTML = currNum;
+            }
+            if(e.target.innerHTML == "log" ){
+                currNum += "log(";
+                input.innerHTML = currNum;
+            }
+            if(e.target.innerHTML == "ln" ){
+                currNum += "ln(";
+                input.innerHTML = currNum;
+            }
+            if(e.target.innerHTML == "e<sup>x</sup>" ){
+                currNum += "e^(";
+                input.innerHTML = currNum;
+            }
+            if(e.target.innerHTML == "x<sup> 2</sup>" ){
+                currNum += "^(2)";
+                input.innerHTML = currNum;
+            }
+            if(e.target.innerHTML == "x<sup> y </sup>" ){
+                currNum += "^(";
+                input.innerHTML = currNum;
+            }
+            if(e.target.innerHTML == "e"){
+                currNum += "2.7182818285";
+                input.innerHTML = currNum;
+            }
+            if(e.target.innerHTML == "&pi;"){
+                currNum += "3.141926536";
+                input.innerHTML = currNum;
+            }
+            if(e.target.innerHTML == "&Sqrt;"){
+                currNum += " &Sqrt;";
+                input.innerHTML = currNum;
+            }
+        })
+    })
+   
+</script>
+</html>

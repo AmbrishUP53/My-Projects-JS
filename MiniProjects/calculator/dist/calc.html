@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-cyan-500 min-h-screen flex justify-center items-center">
+    <div class="border-2 max-w-md w-3/4 grid  rounded-lg grid-row-7 ">
+        <h2 class="text-center text-zinc-700 m-2 font-bold text-2xl">Calculator </h2>
+      
+        <div class="display border-2 border-red-300 h-20 w-full row-span-3 flex  justify-center">
+            <!-- <input type="text" name="number" id="number" class="inpt inline w-5/6   bg-cyan-400 m-2 p-2 rounded-md  text-black " placeholder="000000"> -->
+            <div class="inpt  w-5/6 readonly  bg-cyan-400 m-2 p-2 rounded-md  text-black relative  " >
+
+            </div>
+            <span id="result" class="text-red-500"></span>
+        </div>
+
+        <div class=" grid grid-rows-1 row-span-4 grid-cols-6 gap-2">
+            <div class="col-span-4 grid grid-cols-3 gri-rows-4 ">
+            <button class="min-h-4 min-w-5 bg-gray-400 m-4 p-4 text-center font-bold text-xl text-gr rounded-md buttons shadow-2xl shadow-gray-500 border-6  "   >7</button>
+            <button class="min-h-4 min-w-5 bg-gray-400 m-4 p-4 text-center font-bold text-xl text-gr rounded-md buttons shadow-2xl shadow-gray-500 border-6  "   >8</button>
+            <button class="min-h-4 min-w-5 bg-gray-400 m-4 p-4 text-center font-bold text-xl text-gr rounded-md buttons shadow-2xl shadow-gray-500 border-6  "   >9</button>
+            <button class="min-h-4 min-w-5 bg-gray-400 m-4 p-4 text-center font-bold text-xl text-gr rounded-md buttons shadow-2xl shadow-gray-500 border-6  "   >6</button>
+            <button class="min-h-4 min-w-5 bg-gray-400 m-4 p-4 text-center font-bold text-xl text-gr rounded-md buttons shadow-2xl shadow-gray-500 border-6  "   >5</button>
+            <button class="min-h-4 min-w-5 bg-gray-400 m-4 p-4 text-center font-bold text-xl text-gr rounded-md buttons shadow-2xl shadow-gray-500 border-6  "   >4</button>
+            <button class="min-h-4 min-w-5 bg-gray-400 m-4 p-4 text-center font-bold text-xl text-gr rounded-md buttons shadow-2xl shadow-gray-500 border-6  "   >3</button>
+            <button class="min-h-4 min-w-5 bg-gray-400 m-4 p-4 text-center font-bold text-xl text-gr rounded-md buttons shadow-2xl shadow-gray-500 border-6  " >2</button>
+            <button class="min-h-4 min-w-5 bg-gray-400 m-4 p-4 text-center font-bold text-xl text-gr rounded-md buttons shadow-2xl shadow-gray-500 border-6  "   >1</button>
+            <button class="min-h-4 min-w-5 bg-gray-400 m-4 p-4 text-center font-bold text-xl text-gr rounded-md backBtn shadow-2xl shadow-gray-500 border-6  "   >C</button>
+            <button class="min-h-4 min-w-5 bg-gray-400 m-4 p-4 text-center font-bold text-xl text-gr rounded-md buttons shadow-2xl shadow-gray-500 border-6  "   >0</button>
+            <button class="min-h-4 min-w-5 bg-gray-400 m-4 p-4 text-center font-bold text-xl text-gr rounded-md equal shadow-2xl shadow-gray-500 border-6  "   >=</button>
+           </div>
+           
+            <div class="col-span-2  ">
+            <button class="operator min-h-4 min-w-5 bg-gray-400 m-4 p-4 text-center font-bold text-xl text-gr rounded-md shadow-2xl shadow-gray-500 border-6  "   >+</button>
+            <button class="operator min-h-4 min-w-5 bg-gray-400 m-4 p-4 text-center font-bold text-xl text-gr rounded-md shadow-2xl shadow-gray-500 border-6  "   >-</button>
+            <button class="operator min-h-4 min-w-5 bg-gray-400 m-4 p-4 text-center font-bold text-xl text-gr rounded-md shadow-2xl shadow-gray-500 border-6  "   >*</button>
+            <button class="operator min-h-4 min-w-5 bg-gray-400 m-4 p-4 text-center font-bold text-xl text-gr rounded-md shadow-2xl shadow-gray-500 border-6  "   >/</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+<script>
+    const input = document.querySelector(".inpt");
+    const buttons = document.querySelectorAll(".buttons");
+    const operators = document.querySelectorAll(".operator");
+    const result = document.querySelector("#result");
+    const equl = document.querySelector(".equal");
+    const backBtn = document.querySelector(".backBtn");
+    let res = 0 ;
+    let prevNum = '';
+    let CurrNum = '';
+    let opt = '';
+
+    function appendNumber(number){
+        CurrNum += number;
+        // console.log(CurrNum);
+        input.innerHTML = CurrNum;
+        console.log(input.value)
+    }
+    function choseOperator(op){
+        if(CurrNum == '' ){
+            // result.innerHTML ="first enter the number";
+            return ;
+        }
+        opt = op;
+        prevNum = CurrNum;
+        CurrNum ='' ;
+        input.innerHTML = `${prevNum} ${opt}`;
+    }
+
+    function calculate(){
+        if(prevNum == '' || CurrNum == "" || opt == ''){
+            return ;
+        }
+
+        switch(opt){
+            case '+' :
+                res = parseFloat(prevNum) + parseFloat(CurrNum);
+                break;
+            case '-' :
+                res = parseFloat(prevNum) - parseFloat(CurrNum);
+                break;
+            case '*' :
+                res = parseFloat(prevNum) * parseFloat(CurrNum);
+                break;
+            case '/' :
+                res = parseFloat(prevNum) / parseFloat(CurrNum);
+                break;
+        }
+        console.log(res)
+        prevNum = res;
+        CurrNum = res.toString();
+        opt = '';
+        return res;
+    }
+    
+    function calculate2(){
+        res = 
+    }
+
+    buttons.forEach( button =>{
+            button.addEventListener("click" , (e)=>{
+            appendNumber(e.target.innerHTML);
+            // console.log("hello");
+        });
+    })
+
+    operators.forEach( opt => {
+            opt.addEventListener("click" , (e)=>{
+            // console.log(e.target.value)
+            choseOperator(e.target.innerHTML);
+        }); 
+    })
+
+    equl.addEventListener("click" ,(e)=>{
+        input.innerHTML = calculate();
+    })
+    backBtn.addEventListener("click", (e)=>{
+        input.innerHTML = '';
+        prevNum =''; 
+        CurrNum = '';
+    })
+  
+</script>
+</html>

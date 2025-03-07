@@ -1,0 +1,62 @@
+body{
+    background-color: orange;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    color :rgb(79, 21, 225);
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+.Home{
+    display : flex;
+    justify-content: center;
+    padding :5px;
+    height :3rem;
+    width :100% ;
+    
+    border :2px ,solid , black ;
+
+
+}
+#back{
+    border : 2px, solid ,black;
+    height : 1 rem;
+    width : 3rem;
+    margin : 5px;
+    border-radius: 13%;
+    padding : 10px;
+    text-decoration: none;
+}
+#channel {
+    border :2px , solid , black;
+    height: 1 rem;
+    width : fit-content;
+    margin: 5px;
+    padding:10px;
+    border-radius: 12%;
+    text-decoration: none;
+
+}
+.mid{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap :wrap;
+    align-items: center;
+    width :50%;
+    height :10rem;
+    padding :20px;
+    margin:20px;
+   
+}
+.boxes{
+    border:2px , solid ,red;
+    height: 2rem;
+    width :5rem ;
+    padding: 5px;
+    margin: 10px ;
+    align-items: center;
+    font-style: oblique;
+    font-weight: bolder;
+}

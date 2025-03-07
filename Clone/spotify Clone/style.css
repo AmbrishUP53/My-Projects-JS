@@ -1,0 +1,179 @@
+*{
+    padding: 0;
+    margin: 0;
+    background-color: #000;
+}
+.main{
+    display: grid;
+    gap : 5px;
+    min-height : 100vh;
+    grid-template-columns: 25% ;
+    grid-template-rows: 90%;
+    padding : 0.5rem;
+}
+body{
+    overflow: hidden;
+}
+
+/* Sidebar section */
+.sidebar{
+    background-color: #000;
+    display: grid;
+    gap : 5px;
+    /* height : 100vh; */
+    grid-template-columns: 100%;
+    grid-template-rows:  20% 80%;
+    padding: 0.2rem;
+}
+.Home{
+    grid-row :1/2;
+    background-color: #121212;
+    border-radius: 8px;
+    padding: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    gap:0.8rem;
+    font-size: larger;
+   
+}
+.HomeContent{
+    background-color: inherit;
+    display: flex;
+    gap:0.5rem;
+    color:#fff;
+    /* margin: 8px; */
+}
+.text{
+    background-color: inherit;
+    opacity: 0.7;
+
+}
+.text:hover {
+    opacity : 1;
+}
+.library{
+    grid-row: 2/3;
+    background-color: #121212;
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+
+.headpart{
+    background-color : inherit;
+    padding: 0.2rem;
+    margin: 5px;
+}
+
+.headpart > span{
+    font-size: large;
+    color:#fff ;
+    background-color: inherit;
+}
+.add{
+    float: right;
+    font-weight: bolder;
+    font-size: larger;
+    margin-right: 0.5rem;
+    opacity: 0.5;
+}
+.add:hover{
+    opacity: 1;
+}
+.arrow{
+    float: right;
+    margin-left: 0.5rem;
+    font-size: large;
+    font-weight: bold;
+    opacity: 0.5;
+}
+.arrow:hover{
+    opacity: 1;
+}
+.lib-Card{
+    background-color: #313231;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    margin:1.2rem 0.5rem;
+
+}
+.lib-Card > h4 , h3  {
+    background-color: inherit;
+    color : #fff;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    margin: 5px;
+}
+h3{
+    font-size: 1rem;
+}
+.CreatePlaylist{
+    background-color: #fff ;
+    border-radius: 100px;
+    display: inline-block;
+
+    max-width: 8rem;
+    padding: 0.5rem;
+    margin-left: 1rem;
+    font-weight: bold;
+}
+
+
+
+/* Hero section */
+.heroSection{
+    background-color: #121212;
+    overflow-y :auto;
+    padding: 0.3rem;
+    
+
+}
+.sticky-nav{
+    background-color: #121212;
+    padding: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    position: sticky;
+    top: 5px;
+}
+.sticky-nav-icons{
+    background-color: inherit;
+    padding: 0.2rem;
+}
+
+.sticky-nav-icons > i{
+    background-color: black;
+    font-size: larger;
+    font-weight: 700;
+    padding: 0.2rem;
+    color : #fff;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    
+}
+.sticky-nav-options{
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    
+    justify-content: center;
+}
+.sticky-nav-options > button {
+    font-size: small;
+}
+.sticky-nav-options  > i {
+    color : white;
+    background-color: inherit;
+}
+
+/* Media-section */
+.musicPlayer{
+    background-color: red;
+    grid-column: 1/3;
+    position : fixed;
+    bottom: 0;
+ 
+}

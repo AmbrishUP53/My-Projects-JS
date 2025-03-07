@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel3</title>
+    <link rel="stylesheet" href="output.css">
+
+    
+        
+</head>
+<body>
+    <div class="container  justify-self-center max-w-lg relative border-2 border-black p-2" >
+        <div class="carousel flex  gap-2 max-w-full overflow-hidden  border-black p-2 m-2 transition-transform duration-500">
+            <img src="box2-1st_img.jpg" class="w-full flex-shrink-0" alt="">
+            <img src="box2-2nd_image.jpg" class="w-full flex-shrink-0" alt="">
+            <img src="home-box3.jpg" class="w-full flex-shrink-0" alt="">
+        </div>
+        <button class="prev absolute top-1/2 left-0 bg-gray-700  bg-opacity-1 text-center p   w-5 rounded-full text-white font-bold" >&larr;</button>
+        <button class="next absolute  top-1/2 right-0 bg-gray-700 bg-opacity-1  w-5 rounded-full text-white font-bold">&rarr;</button>
+    </div>
+</body>
+<script>
+    let currSlide = 0;
+    let carousel = document.querySelector(".carousel");
+    let prvBtn = document.querySelector(".prev")
+    let nextBtn = document.querySelector(".next")
+    let totalSlide = carousel.children.length;
+    function moveSlide(){
+        if(currSlide < totalSlide-1){
+            currSlide++;
+        }
+        else{
+            currSlide = 0;
+        }
+        carousel.classList.add (`translateX(-${currSlide*100}%)`);
+    }
+   setInterval(moveSlide(), 3000); 
+</script>
+</html>

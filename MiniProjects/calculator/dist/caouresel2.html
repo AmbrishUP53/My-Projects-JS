@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>caoursel2</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="relative w-full max-w-lg overflow-hidden">
+        <div class="flex transition-transform duration-500 ease-in" id="carousel">
+                <img src="box2-2nd_image.jpg" alt="slide 1" class="w-full flex-shrink-0">
+   
+                <img src="Dinning-box3.jpg" alt="slide 1" class="w-full flex-shrink-0">
+         
+                <img src="home-box3.jpg" alt="slide 1" class="w-full flex-shrink-0">
+        </div>
+        <button id="prev" class="absolute top-1/2 left-4 transform-translate-y-1/2 bg-opacity-50 py-1 px-3 text-white bg-black">&larr;</button>
+        <button id="next" class="absolute top-1/2 right-4  transform-translate-y-1/2 bg-opacity-50 py-1 px-3 text-white bg-black">&rarr;</button>
+    </div>
+</body>
+ <script>
+    let currSlide = 0;
+
+function moveToSlide(step){
+    const caoursel = document.getElementById("caoursel");
+    const totalSlide = carousel.children.length;
+    currSlide = (currSlide + step +totalSlide)%totalSlide
+
+    carousel.style.transform = `translateX(-${currSlide*100}%)` ;
+
+}
+document.getElementById("prev").addEventListener("click" , ()=> moveToSlide(-1)) ;
+document.getElementById("next").addEventListener("click" ,()=> moveToSlide(1)) ;
+</script>
+</html>
